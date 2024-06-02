@@ -44,6 +44,10 @@ docker run --rm -p 8080:8080 \
 --env-file=.env unattended-jenkins
 ```
 
+## Notes
+
+Wait until Jenkins is fully operational before using "jenkins-cli".
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
