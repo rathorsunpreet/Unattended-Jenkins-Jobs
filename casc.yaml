@@ -1,0 +1,79 @@
+jenkins:
+  securityRealm:
+    local:
+      allowsSignup: false
+      # Use Environment Variables to setup local user
+      # Can use .env file for this step
+      users:
+        - id: '${JENKINS_ADMIN_ID}'
+          password: '${JENKINS_ADMIN_PASSWORD}'
+  authorizationStrategy:
+  # Permissions for each user
+    projectMatrix:
+      entries:
+        - group:
+            name: authenticated
+            permissions:
+              - Agent/Build
+              - Agent/Configure
+              - Agent/Connect
+              - Agent/Create
+              - Agent/Delete
+              - Agent/Disconnect
+              - Credentials/Create
+              - Credentials/Delete
+              - Credentials/ManageDomains
+              - Credentials/Update
+              - Credentials/View
+              - Job/Build
+              - Job/Cancel
+              - Job/Configure
+              - Job/Create
+              - Job/Delete
+              - Job/Discover
+              - Job/Move
+              - Job/Read
+              - Job/Workspace
+              - Overall/Administer
+              - Overall/Read
+              - Run/Delete
+              - Run/Replay
+              - Run/Update
+              - View/Configure
+              - View/Create
+              - View/Delete
+              - View/Read
+        - user:
+            name: anonymous
+            permissions:
+              - Overall/Read
+        - user:
+            name: '${JENKINS_ADMIN_ID}'
+            permissions:
+              - Overall/Read
+              - Overall/Administer
+tool:
+# Global Tools Configuration here
+  git:
+    installations:
+      - home: git
+        name: git
+  nodejs:
+    defaultProperties:
+    - installSource:
+        installers:
+        - nodeJSInstaller:
+            npmPackagesRefreshHours: 72
+    installations:
+    - name: "nodejs-22.2.0"
+      home: ""
+      properties:
+      - installSource:
+          installers:
+          - nodeJSInstaller:
+              id: "22.2.0"
+              npmPackagesRefreshHours: 72
+unclassified:
+# Required to remove the Reverse Proxy is wrong warning / message
+  location:
+    url: 'http://localhost:8080/'

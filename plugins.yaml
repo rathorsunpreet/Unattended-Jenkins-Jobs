@@ -1,0 +1,67 @@
+plugins:
+# Suggested Plugins taken from
+# https://github.com/jenkinsci/jenkins/blob/master/core/src/main/resources/jenkins/install/platform-plugins.json
+  - artifactId: ant
+    source:
+      version: latest
+  - artifactId: antisamy-markup-formatter
+    source:
+      version: latest
+  - artifactId: build-timeout
+    source:
+      version: latest
+  - artifactId: cloudbees-folder
+    source:
+      version: latest
+  - artifactId: configuration-as-code
+    source:
+      version: latest
+  - artifactId: credentials-binding
+    source:
+      version: latest
+  - artifactId: email-ext
+    source:
+      version: latest
+  - artifactId: git
+    source:
+      version: latest
+  - artifactId: github-branch-source
+    source:
+      version: latest
+  - artifactId: gradle
+    source:
+      version: latest
+  - artifactId: ldap
+    source:
+      version: latest
+  - artifactId: mailer
+    source:
+      version: latest
+  - artifactId: matrix-auth
+    source:
+      version: latest
+  - artifactId: pam-auth
+    source:
+      version: latest
+  - artifactId: pipeline-github-lib
+    source:
+      version: latest
+  - artifactId: pipeline-graph-view
+    source:
+      version: latest
+  - artifactId: ssh-slaves
+    source:
+      version: latest
+  - artifactId: timestamper
+    source:
+      version: latest
+  - artifactId: workflow-aggregator
+    source:
+      version: latest
+  - artifactId: ws-cleanup
+    source:
+      version: latest
+# User Requested Plugins now
+  - artifactId: nodejs
+    source:
+      version: latest
