@@ -20,6 +20,3 @@ COPY simple-api.xml /var/jenkins_home/simple-api.xml
 
 # Copy shell script into $JENKINS_HOME folder
 copy setup-job.sh /var/jenkins_home/setup-job.sh
-
-# Give execute permissions
-chmod +x /var/jenkins_home/setup-job.sh

@@ -65,7 +65,7 @@ tool:
         - nodeJSInstaller:
             npmPackagesRefreshHours: 72
     installations:
-    - name: "nodejs-22.2.0"
+    - name: "node-22.2.0"
       home: ""
       properties:
       - installSource:
