@@ -44,6 +44,9 @@ docker run --rm -p 8080:8080 \
 --env-file=.env unattended-jenkins
 
 # To run the provided shell script
+# The provided username and password can be different from
+# the ones used in "docker run" command but the user needs to
+# have the correct permissions.
 ./setup-job.sh -u <username> -p <password>
 ```
 
