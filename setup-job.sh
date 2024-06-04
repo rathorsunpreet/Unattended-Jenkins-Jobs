@@ -50,4 +50,4 @@ fi
 echo "Creating a Job"
 java -jar jenkins-cli.jar -auth "$usrname":"$psswd" -s http://localhost:8080/ create-job simple-api < simple-api.xml
 echo "Running created Job"
-java -jar jenkins-cli.jar -auth "$usrname":"$psswd" -s http://localhost:8080/ build simple-api
+java -jar jenkins-cli.jar -auth "$usrname":"$psswd" -s http://localhost:8080/ build -s -v simple-api

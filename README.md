@@ -42,6 +42,9 @@ docker run --rm -p 8080:8080 \
 # Execution using "docker run --env-file"
 docker run --rm -p 8080:8080 \
 --env-file=.env unattended-jenkins
+
+# To run the provided shell script
+./setup-job.sh -u <username> -p <password>
 ```
 
 ## Notes
