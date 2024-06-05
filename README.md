@@ -12,6 +12,8 @@ To setup the user, the following two Environment Variables are used:
 1. JENKINS_ADMIN_ID
 2. JENKINS_ADMIN_PASSWORD
 
+Demo / Explanation: https://www.youtube.com/watch?v=s715EUHGxIs
+
 ## Important Files
 The following table list the files with a short description of what they do:
 | File Name | Short Description |
