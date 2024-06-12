@@ -41,7 +41,6 @@ while getopts "${flags}" options; do
             exit_on_fail
             ;;
     esac
-    noargs='true'
 done
 
 
